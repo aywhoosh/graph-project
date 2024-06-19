@@ -1,3 +1,36 @@
-.ayush {
-    max-height: 50px;
+.graph-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+.top-half{
+    flex: 1;
+    overflow: auto;
+}
+
+.divider{
+    height: 1rem;
+    background-color: #ccc;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.bottom-half {
+    flex: 1;
+    overflow: auto;
+}
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.button-container .right {
+    margin-left: 5px;
+}
+
+
+
+

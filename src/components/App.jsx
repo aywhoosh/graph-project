@@ -1,55 +1,23 @@
-import React, { useState } from "react";
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
-import rawData from "../../public/rawData";
-
-   
-
-const num = 40;
-const datakeys = [];
-for(let i = 1; i<=num; i++){
-    datakeys.push("s"+i);
-};
-
-
-const lineComponents = datakeys.map((datakey, index) => (
-    <Line type="monotone"
-    dataKey={datakey}
-    stroke={index%2===0 ? "#f37022" : "#02164F"}
-    dot={false}
-    key={datakey}
-    isAnimationActive={false}
-    />
-));
-
-console.log(lineComponents);
+import React from "react";
+import LineGraph from "./LineGraph";
+import text from "../sample";
+import Divider from '@mui/material/Divider';
 
 function App () {
-    const [width, setWidth] = useState(1000);
-    
+    return <div className="graph-container">
+        <div className="top-half">
+            <p>{text}</p>
+            {/* <HeatGraph /> */}
 
-        function handleIncrease() {
-            setWidth(width+1000);
-        }
+        </div>
 
-        function handleDecrease() {
-            setWidth(width-1000);
-        }
-    
+        <Divider style={{ padding: 10 }}>Center</Divider>
 
-    return <div >
-        <button onClick={handleIncrease}> Increase </button>
-        <button onClick={width <1000 ? alert("cannot decrease further") : handleDecrease}> Decrease </button>
-        {lineComponents.map( (line,index) => (
-            <div key={index}>
-                <LineChart width={width} height={100} data={rawData} margin={{ top: 0, right: 20, bottom: 20, left: 0 }}>
-                    {line}
-                    {index == num-1 && <XAxis />}
-                    <YAxis />
-                    <Tooltip />
-                </LineChart>
-            </div>
-        ))}
-        
+        <div className="bottom-half">
+
+            
+            <LineGraph />
+        </div>
     </div>
 }
 
