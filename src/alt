@@ -1,0 +1,14 @@
+import React, { useLayoutEffect } from "react";
+import ReactDOM from "react-dom";
+import * as pi from "./math.js"; // we import an object here {doublePi: function(), triplePi: function(), defaultL 3.1415962 (value of pi variable from math.js) }
+
+// widlcard is discouraged, as without it, we can import exactly and only what we need, helping with the specificity of our code
+
+ReactDOM.render(
+    <ul>
+        <li> {pi.default} </li>
+        <li> {pi.doublePi()} </li>
+        <li> {pi.triplePi()} </li>
+    </ul>
+    ,document.getElementById("root")
+);
