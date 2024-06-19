@@ -14,9 +14,8 @@ function App () {
         <Divider style={{ padding: 10 }}>Center</Divider>
 
         <div className="bottom-half">
-
-            
             <LineGraph />
+
         </div>
     </div>
 }
