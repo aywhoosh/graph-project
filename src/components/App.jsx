@@ -1,13 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import LineGraph from "./LineGraph";
-import text from "../sample";
 import Divider from '@mui/material/Divider';
 
 function App () {
+    const [zoom, setZoom] = useState(false);
+
     return <div className="graph-container">
         <div className="top-half">
-            <p>{text}</p>
-            {/* <HeatGraph /> */}
+            {/* <img src="../../public/heatmap.svg" alt="" /> */}
+            
 
         </div>
 

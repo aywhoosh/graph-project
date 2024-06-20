@@ -4,8 +4,12 @@
     flex-direction: column;
 }
 
-.top-half{
+/* .top-half{
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     overflow: auto;
 }
 
@@ -19,7 +23,7 @@
 .bottom-half {
     flex: 1;
     overflow: auto;
-}
+} */
 .button-container {
     position: fixed;
     bottom: 20px;

@@ -3,7 +3,7 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts'
 import rawData from "../../public/rawData";
 import Buttons from "./Buttons"
 
-const num = 24;
+const num = 369;
 const datakeys = [];
 for(let i = 1; i<=num; i++){
     datakeys.push("s"+i);
